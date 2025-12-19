@@ -25,9 +25,9 @@ namespace EmployeeManagement.Repositories
         {
             using var con = new SqlConnection(_connectionString);
 
-            return con.QueryFirstOrDefault<Employee>(
-                "sp_GetEmployeeById",
-                new { EmployeeId = id },
+            return con.QueryFirstOrDefault<Employee>
+                (
+                "sp_GetEmployeeById", new { EmployeeId = id },
                 commandType: CommandType.StoredProcedure
             );
         }
