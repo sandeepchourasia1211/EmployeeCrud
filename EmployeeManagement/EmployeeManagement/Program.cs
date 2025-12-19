@@ -13,6 +13,11 @@ builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 
 var app = builder.Build();
+app.UseStaticFiles();
+app.UseDefaultFiles(new DefaultFilesOptions
+{
+    DefaultFileNames = new List<string> { "employee.html" }
+});
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

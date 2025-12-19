@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Management</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Employee Management</h2>
+
+        <div class="header-bar">
+            <button class="add-btn" onclick="showForm()">➕ Add New Employee</button>
+        </div>
+
+        <table>
+            <colgroup>
+                <col style="width:38%">
+                <col style="width:12%">
+                <col style="width:15%">
+                <col style="width:35%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Salary</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTable"></tbody>
+        </table>
+
+    </div>
+
+    <!-- ================= MODAL OVERLAY ================= -->
+    <div class="modal-overlay" id="modalOverlay" onclick="hideForm()"></div>
+
+    <!-- ================= MODAL FORM ================= -->
+    <div class="modal" id="employeeForm">
+        <h3 id="formTitle">Add Employee</h3>
+
+        <input type="hidden" id="employeeId">
+
+        <label>Name</label>
+        <input type="text" id="ename">
+
+        <label>Age</label>
+        <input type="number" id="age">
+
+        <label>Salary</label>
+        <input type="number" id="salary">
+
+        <div class="form-actions">
+            <button onclick="submitEmployee()">Save</button>
+            <button class="cancel-btn" onclick="hideForm()">Cancel</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/js/employee.js"></script>
+
+</body>
+</html>

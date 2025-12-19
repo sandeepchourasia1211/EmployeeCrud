@@ -1,0 +1,222 @@
+﻿
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(120deg, #eef2f3, #d9e4f5);
+    margin: 0;
+    padding: 30px;
+}
+
+h2 {
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+
+
+.header-bar {
+    margin-bottom: 15px;
+}
+
+
+
+button {
+    background: #4f46e5;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+
+    button:hover {
+        background: #4338ca;
+        transform: translateY(-1px);
+    }
+
+.add-btn {
+    background: #4f46e5;
+}
+
+/* ===============================
+   TABLE (ALIGNED)
+================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+thead {
+    background-color: #f1f5f9;
+}
+
+th, td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+th {
+    font-weight: 600;
+    color: #374151;
+}
+
+    /* Column alignment */
+    th:nth-child(1), td:nth-child(1) {
+        text-align: left;
+    }
+
+    th:nth-child(2), td:nth-child(2) {
+        text-align: left;
+    }
+
+    th:nth-child(3), td:nth-child(3) {
+        text-align: right;
+    }
+
+    th:nth-child(4), td:nth-child(4) {
+        text-align: center;
+    }
+
+/* Hover row */
+tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+/* ===============================
+   ACTION BUTTONS
+================================ */
+
+.action-btns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+    .action-btns button:first-child {
+        background: #10b981;
+    }
+
+        .action-btns button:first-child:hover {
+            background: #059669;
+        }
+
+    .action-btns button:last-child {
+        background: #ef4444;
+    }
+
+        .action-btns button:last-child:hover {
+            background: #dc2626;
+        }
+
+/* ===============================
+   MODAL OVERLAY
+================================ */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    display: none;
+    z-index: 1000;
+}
+
+/* ===============================
+   MODAL FORM
+================================ */
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    width: 420px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    display: none;
+    z-index: 1001;
+    animation: fadeIn 0.25s ease-in-out;
+}
+
+    .modal h3 {
+        margin-bottom: 15px;
+        color: #1f2937;
+    }
+
+/* ===============================
+   FORM CONTROLS
+================================ */
+
+label {
+    font-weight: 600;
+    color: #374151;
+}
+
+input {
+    width: 100%;
+    padding: 9px;
+    margin-top: 4px;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+}
+
+    input:focus {
+        outline: none;
+        border-color: #4f46e5;
+        box-shadow: 0 0 0 2px rgba(79,70,229,0.15);
+    }
+
+/* ===============================
+   FORM ACTIONS
+================================ */
+
+.form-actions {
+    text-align: right;
+}
+
+.cancel-btn {
+    background: #9ca3af;
+    margin-left: 8px;
+}
+
+    .cancel-btn:hover {
+        background: #6b7280;
+    }
+
+/* ===============================
+   ANIMATION
+================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
