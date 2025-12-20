@@ -19,8 +19,8 @@ create asp.net core web api controller named EmployeeController with following a
 1.  GET/api/employee --Get all employee
 2.  GET/api/employee/{id} --Get all employee by id
 3.  POST/api/employee --add new employee
-4.  PUT/api/employee/{id} --update all employee
-5.  DELETE/api/employee/{id} --Get all employee
+4.  PUT/api/employee/{id} --update employee by id
+5.  DELETE/api/employee/{id} --Delete employee by id
 
 requirement 4.
 
